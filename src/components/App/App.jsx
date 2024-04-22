@@ -42,7 +42,7 @@ export class App extends Component {
 
         this.setState(prevState => ({
           images: [...prevState.images, ...data.hits],
-          showMoreBtn: Math.ceil(data.totalHits / 15) > this.state.page,
+          showMoreBtn: Math.ceil(data.totalHits / 12) > this.state.page,
         }));
       } catch (err) {
         this.setState({ isEmpty: err.message });
